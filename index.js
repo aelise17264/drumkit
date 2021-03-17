@@ -17,6 +17,11 @@ for (i = 0; i < drums; i++){
     //   console.log(this.style)
     // this.style.color = "white";
     var buttonHTML = this.innerHTML
+    
+    // makeSound(buttonHTML)
+    
+    animation(buttonHTML)
+
     switch (buttonHTML){
         case "w":
             var snare = new Audio('sounds/snare.mp3');
@@ -55,8 +60,14 @@ for (i = 0; i < drums; i++){
 }
 
 document.addEventListener("keydown", function(event){
-    console.log(event)
+    // console.log(event)
+    
     var thisKey = event.key
+    
+    // makeSound(thisKey)
+    
+    animation(thisKey)
+
     switch (thisKey){
         case "w":
             var snare = new Audio('sounds/snare.mp3');
@@ -91,3 +102,13 @@ document.addEventListener("keydown", function(event){
 
     }
 })
+
+function animation(currentKey){
+    var activeButton = document.querySelector("." + currentKey)
+    activeButton.classList.add("pressed")
+    // console.log(activeButton.classList)
+
+    setTimeout(() => {
+        activeButton.classList.remove("pressed")
+    }, 500)
+}
