@@ -87,7 +87,7 @@ document.addEventListener("keydown", function(event){
             crash.play();
         break;
             
-    default: console.log(buttonHTML)
+    default: console.log(thisKey)
 
     }
 })
