@@ -1,5 +1,11 @@
-document.querySelector("button").addEventListener("click", handleClick)
+document.querySelectorAll("button").forEach(button => {
+    button.addEventListener("click", handleClick)
+
+})
 
 function handleClick(){
-    alert("I've been clicked!")
+    var audio = new Audio('sounds/tom-1.mp3');
+    audio.play()
 }
+
+// document.getElementsByClassName("button").addEventListener("click", handleClick)
