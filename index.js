@@ -1,25 +1,11 @@
-// document.querySelectorAll("button").forEach(button => {
-//     button.addEventListener("click", handleClick)
-
-// })
-
-// function handleClick(){
-// var audio = new Audio('sounds/tom-1.mp3');
-// audio.play() 
-// }
-
-// document.getElementsByClassName("button").addEventListener("click", handleClick)
 
 var drums = document.querySelectorAll(".drum").length
 
 for (i = 0; i < drums; i++){
     document.querySelectorAll(".drum")[i].addEventListener("click", function(){
     //   console.log(this.style)
-    // this.style.color = "white";
     var buttonHTML = this.innerHTML
-    
-    // makeSound(buttonHTML)
-    
+        
     animation(buttonHTML)
 
     switch (buttonHTML){
@@ -63,9 +49,7 @@ document.addEventListener("keydown", function(event){
     // console.log(event)
     
     var thisKey = event.key
-    
-    // makeSound(thisKey)
-    
+        
     animation(thisKey)
 
     switch (thisKey){
